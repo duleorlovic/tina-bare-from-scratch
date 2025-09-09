@@ -5,7 +5,7 @@ import post from "./collections/post";
 
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 export const config = defineConfig({
-    // contentApiUrlOverride: "/api/tina/gql",
+    contentApiUrlOverride: "/api/tina/gql",
     authProvider: isLocal ? new LocalAuthProvider() : new UsernamePasswordAuthJSProvider(),
     clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
     branch: process.env.NEXT_PUBLIC_TINA_BRANCH || // custom branch env override
